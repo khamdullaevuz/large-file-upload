@@ -46,6 +46,14 @@
                 r.on('fileAdded', (file, event) => {
                     r.upload()
                 })
+
+                r.on('fileSuccess', (file, message) => {
+                    alert('File uploaded successfully')
+                })
+
+                r.on('fileError', (file, message) => {
+                    alert('File upload failed')
+                })
             }
         }))
     })
